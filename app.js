@@ -152,8 +152,9 @@ let submitBtn = document.getElementById("submitBtn").addEventListener("click", (
 	let searchBar = document.getElementById("searchBar");
 	
 	leitaAfStod(searchBar.value.charAt(0).toUpperCase() + searchBar.value.slice(1));
-
 	searchBar.value = "";
+
+	document.getElementById("fjoldiStodva").innerHTML = "";
 });
 
 
