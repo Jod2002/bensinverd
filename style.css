@@ -1,0 +1,48 @@
+
+/* ___           _ 
+  |_  |         | |
+    | | ___   __| |
+    | |/ _ \ / _` |
+/\__/ / (_) | (_| |
+\____/ \___/ \__,_|
+*/
+
+
+
+
+* {
+	font-family: sans-serif;
+}
+
+body {
+	margin: auto;
+	max-width: 50em;
+}
+
+header {
+	text-align: center;
+}
+
+.boldClass {
+	font-weight: bold;
+}
+
+.odyrasta {
+	background-color: #3467eb;
+	padding: .5em;
+	border: black 1px solid;
+}
+
+.divClass {
+	padding: .5em;
+	border: black 1px solid;
+}
+
+.gridClass {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+}
+
+.hoverClass:hover {
+	cursor: pointer;
+}
