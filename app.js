@@ -45,22 +45,28 @@ function lookUpGasStation(id) {
 		let stadsetning = document.createElement("p");
 		stadsetning.innerHTML = `<span class="boldClass">Staðsetning:</span> ${out["results"][id].name}`;
 		nyttDiv.appendChild(stadsetning);
+		// Sæki breytingar tíma
+		let breytingaTimi = document.createElement("p");
+		breytingaTimi.innerHTML = `<span class="boldClass">Síðast uppfært:</span> ${out["timestampApis"].slice(0,10)} kl ${out["timestampApis"].slice(11,19)}`;
+		nyttDiv.appendChild(breytingaTimi);
+
+		/*
 		// Sæki geo staðsetningu
 		let geoLocation = document.createElement("p");
 		geoLocation.innerHTML = `<span class="boldClass">lat/lon:</span> ${out["results"][id].geo.lat}, ${out["results"][id].geo.lon}`;
 		nyttDiv.appendChild(geoLocation);
+		*/
+
+		/*
 		// Sæki key
 		let gasStationKey = document.createElement("p");
 		gasStationKey.innerHTML = `<span class="boldClass">key:</span> ${out["results"][id].key}`;
 		nyttDiv.appendChild(gasStationKey);
-		// Sæki breytingar tíma
-		let breytingaTimi = document.createElement("p");
-		breytingaTimi.innerHTML = `<span class="boldClass">Síðast uppfært:</span> ${out["timestampApis"]}`;
-		nyttDiv.appendChild(breytingaTimi);
 		// ID
 		let idTag = document.createElement("p");
 		idTag.innerHTML = `<span class="boldClass">id:</span> ${id}`;
 		nyttDiv.appendChild(idTag);
+		*/
 
 		container.appendChild(nyttDiv);
 		container.appendChild(nyttBr);
