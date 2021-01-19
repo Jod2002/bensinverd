@@ -28,14 +28,15 @@ header {
 }
 
 .odyrasta {
-	background-color: #3467eb;
+	background-color: #0f2557;
+	color: #bfbfbf;
 	padding: .5em;
-	border: black 1px solid;
 }
 
 .divClass {
 	padding: .5em;
-	border: black 1px solid;
+	background-color: #28559a;
+	color: #111d3d;
 }
 
 .gridClass {
@@ -45,4 +46,25 @@ header {
 
 .hoverClass:hover {
 	cursor: pointer;
+}
+
+.button {
+	background-color: #3467eb;
+	border: none;
+	border-radius: 8px;
+	padding: 5px 24px;
+}
+.button:hover {
+	cursor: pointer;
+}
+
+.searchBar {
+	border: none;
+	padding: 5px;
+	border-bottom: #595959 2px solid;
+}
+.searchBar:focus {
+	outline: none;
+	border-bottom: #0f2557 2px solid;
+
 }

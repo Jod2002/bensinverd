@@ -12,8 +12,7 @@
 
 let url = 'https://apis.is/petrol';
 
-
-
+// Fall til að birta stöðvar eftir id
 function lookUpGasStation(id) {
 	fetch(url)
 	.then(res => res.json())
@@ -50,24 +49,6 @@ function lookUpGasStation(id) {
 		breytingaTimi.innerHTML = `<span class="boldClass">Síðast uppfært:</span> ${out["timestampApis"].slice(0,10)} kl ${out["timestampApis"].slice(11,19)}`;
 		nyttDiv.appendChild(breytingaTimi);
 
-		/*
-		// Sæki geo staðsetningu
-		let geoLocation = document.createElement("p");
-		geoLocation.innerHTML = `<span class="boldClass">lat/lon:</span> ${out["results"][id].geo.lat}, ${out["results"][id].geo.lon}`;
-		nyttDiv.appendChild(geoLocation);
-		*/
-
-		/*
-		// Sæki key
-		let gasStationKey = document.createElement("p");
-		gasStationKey.innerHTML = `<span class="boldClass">key:</span> ${out["results"][id].key}`;
-		nyttDiv.appendChild(gasStationKey);
-		// ID
-		let idTag = document.createElement("p");
-		idTag.innerHTML = `<span class="boldClass">id:</span> ${id}`;
-		nyttDiv.appendChild(idTag);
-		*/
-
 		container.appendChild(nyttDiv);
 		container.appendChild(nyttBr);
 
@@ -75,7 +56,6 @@ function lookUpGasStation(id) {
 	})
 	.catch(err => { throw err });
 }
-
 //lookUpGasStation(1);
 
 
@@ -98,15 +78,14 @@ function odyrastaStodin () {
 			odyrastaID.push(out["results"][i].bensin95);
 		}
 
-		let odyrastaNafn = document.getElementById("odyrastaNafn").innerHTML = `Ódýrasta stöðin er ${out["results"][odyrastaID.indexOf(min(odyrastaID))].company}`;
-		let odyrastaBensin = document.getElementById("odyrastaBensin").innerHTML = `Bensín verð: ${out["results"][odyrastaID.indexOf(min(odyrastaID))].bensin95}kr`;
-		let odyrastaDiesel = document.getElementById("odyrastaDiesel").innerHTML = `Dísel verð: ${out["results"][odyrastaID.indexOf(min(odyrastaID))].diesel}kr`;
+		document.getElementById("odyrastaNafn").innerHTML = `Ódýrasta stöðin er ${out["results"][odyrastaID.indexOf(min(odyrastaID))].company}`;
+		document.getElementById("odyrastaBensin").innerHTML = `Bensín verð: ${out["results"][odyrastaID.indexOf(min(odyrastaID))].bensin95}kr`;
+		document.getElementById("odyrastaDiesel").innerHTML = `Dísel verð: ${out["results"][odyrastaID.indexOf(min(odyrastaID))].diesel}kr`;
 
 
 	})
 	.catch(err => { throw err });
 }
-
 odyrastaStodin();
 
 
@@ -125,7 +104,7 @@ function allarStodvar(fyrirtæki) {
 			}
 		}
 
-		let fjoldiStodvaHTML = document.getElementById("fjoldiStodva").innerHTML = `Fjöldi stöðva: ${fjoldiStodva}`;
+		document.getElementById("fjoldiStodva").innerHTML = `<span class="boldClass">Fjöldi stöðva:</span> ${fjoldiStodva}`;
 
 	})
 	.catch(err => { throw err });
@@ -144,12 +123,11 @@ function leitaAfStod(stadsetning) {
 				lookUpGasStation(i);
 			}
 		}
-
 	})
 	.catch(err => { throw err });
 }
-
 //leitaAfStod("Garðabær");
+
 
 let submitBtn = document.getElementById("submitBtn").addEventListener("click", () => {
 
@@ -162,8 +140,6 @@ let submitBtn = document.getElementById("submitBtn").addEventListener("click", (
 
 	document.getElementById("fjoldiStodva").innerHTML = "";
 });
-
-
 
 
 // Messí kóði (yikes)
