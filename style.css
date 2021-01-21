@@ -103,3 +103,4 @@ header {
 		border-radius: 5px;
 	}
 }
+.button { -webkit-appearance: none; }
