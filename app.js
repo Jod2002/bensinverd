@@ -46,7 +46,7 @@ function lookUpGasStation(id) {
 		nyttDiv.appendChild(stadsetning);
 		// Sæki breytingar tíma
 		let breytingaTimi = document.createElement("p");
-		breytingaTimi.innerHTML = `<span class="boldClass">Síðast uppfært:</span> ${out["timestampApis"].slice(0,10)} kl ${out["timestampApis"].slice(11,19)}`;
+		breytingaTimi.innerHTML = `<span class="boldClass">Síðast uppfært kl:</span> ${out["timestampApis"].slice(11,16)}`;
 		nyttDiv.appendChild(breytingaTimi);
 
 		container.appendChild(nyttDiv);
