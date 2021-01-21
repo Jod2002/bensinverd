@@ -53,10 +53,11 @@ footer {
 }
 
 .button {
-	background-color: #3467eb;
+	background-color: #0f2557;
 	border: none;
 	border-radius: 8px;
 	padding: 5px 24px;
+	color: #ffffff;
 }
 .button:hover {
 	cursor: pointer;
@@ -120,6 +121,9 @@ footer {
 
 		background-color: transparent;
 		color: #ffffff;
+	}
+	.searchBar:hover {
+		border-bottom: #ffffff 2px solid;
 	}
 
 	.inputClass {
