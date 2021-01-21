@@ -147,10 +147,6 @@ let atlantsolia = document.getElementById("atlantsolia").addEventListener("click
 	document.getElementById("container").innerHTML = "";
 	allarStodvar("Atlantsolía");
 });
-let costcoIceland = document.getElementById("costcoIceland").addEventListener("click", () => {
-	document.getElementById("container").innerHTML = "";
-	allarStodvar("Costco Iceland");
-});
 let daelan = document.getElementById("daelan").addEventListener("click", () => {
 	document.getElementById("container").innerHTML = "";
 	allarStodvar("Dælan");

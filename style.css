@@ -23,6 +23,10 @@ header {
 	text-align: center;
 }
 
+footer {
+	text-align: center;
+}
+
 .boldClass {
 	font-weight: bold;
 }
